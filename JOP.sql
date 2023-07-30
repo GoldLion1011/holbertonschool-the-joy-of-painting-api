@@ -3,7 +3,6 @@ CREATE TABLE Episodes (
   episode_id INT PRIMARY KEY AUTO_INCREMENT,
   episode_title VARCHAR(255),
   original_broadcast_date DATE,
-
 );
 
 -- Create the "Subjects" table
@@ -16,7 +15,7 @@ CREATE TABLE Subjects (
 CREATE TABLE ColorPalettes (
   color_id INT PRIMARY KEY AUTO_INCREMENT,
   color_name VARCHAR(255),
-);
+  hex_value VARCHAR(7), -- Use VARCHAR to store the hex value (e.g., '#FF0000')
 
 -- Create the "EpisodeSubjects" junction table (Many-to-Many relationship)
 CREATE TABLE EpisodeSubjects (

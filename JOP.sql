@@ -1,8 +1,13 @@
+-- Set up the database and tables for the JOP project
+CREATE DATABASE IF NOT EXISTS JOP;
+
+USE JOP;
+
 -- Create the "Episodes" table
 CREATE TABLE Episodes (
-  episode_id INT PRIMARY KEY AUTO_INCREMENT,
+  episode_id VARCHAR(6), -- season and episode number
   episode_title VARCHAR(255),
-  original_broadcast_date DATE,
+  air_date DATE,
 );
 
 -- Create the "Subjects" table
@@ -13,9 +18,9 @@ CREATE TABLE Subjects (
 
 -- Create the "ColorPalettes" table
 CREATE TABLE ColorPalettes (
-  color_id INT PRIMARY KEY AUTO_INCREMENT,
+  color_id INT PRIMARY KEY AUTO_INCREMENT, -- needs to be joined hex_value
   color_name VARCHAR(255),
-  hex_value VARCHAR(7), -- Use VARCHAR to store the hex value (e.g., '#FF0000')
+  hex_value VARCHAR(7),
 
 -- Create the "EpisodeSubjects" junction table (Many-to-Many relationship)
 CREATE TABLE EpisodeSubjects (
@@ -26,8 +31,8 @@ CREATE TABLE EpisodeSubjects (
   FOREIGN KEY (subject_id) REFERENCES Subjects(subject_id) ON DELETE CASCADE
 );
 
--- Create the "EpisodeColorPalettes" junction table (Many-to-Many relationship)
-CREATE TABLE EpisodeColorPalettes (
+-- Create the "EpisodeColors" junction table (Many-to-Many relationship)
+CREATE TABLE EpisodeColors (
   episode_id INT,
   color_id INT,
   PRIMARY KEY (episode_id, color_id),

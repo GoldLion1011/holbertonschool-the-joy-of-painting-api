@@ -1,5 +1,5 @@
 // Data Preparation - Read and parse CSV files to get data as JavaScript objects/arrays
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const fs = require('fs');
 const parse = require('csv-parse/lib/sync');
 
@@ -87,3 +87,6 @@ connection.connect((err) => {
     }
   });
 });
+
+
+module.exports = main;

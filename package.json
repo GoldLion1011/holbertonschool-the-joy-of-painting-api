@@ -1,25 +1,20 @@
 {
-  "name": "yes",
+  "name": "holbertonschool-the-joy-of-painting-api",
   "version": "1.0.0",
-  "description": "joy_of_painting_api",
-  "main": "index.js",
+  "description": "",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GoldLion1011/holbertonschool-the-joy-of-painting-api.git"
-  },
-  "author": "Sarah McGowan",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GoldLion1011/holbertonschool-the-joy-of-painting-api/issues"
-  },
-  "homepage": "https://github.com/GoldLion1011/holbertonschool-the-joy-of-painting-api#readme",
   "dependencies": {
-    "csv-parser": "^3.0.0",
+    "csv-parse": "^5.4.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1"
   }
 }

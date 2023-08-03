@@ -1,7 +1,7 @@
 // Data Preparation - Read and parse CSV files to get data as JavaScript objects/arrays
 const mysql = require('mysql');
 const fs = require('fs');
-const parse = require('csv-parse/lib/sync');
+const parse = require('csv-parse');
 
 
 // Set up the database connection

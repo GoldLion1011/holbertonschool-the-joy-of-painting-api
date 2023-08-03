@@ -1,16 +1,16 @@
-// Let's make this an API server that can filter the episodes based on the following criteria:
-// - month: the month of the air date (1-12)
-// - subject: the subject of the episode (e.g. "Cactus", "Moon")
-// - colors: the colors of the episode (e.g. "Prussian Blue", "Burnt Sienna")
-// - matchType: whether to match all criteria or any criteria (e.g. "all" or "any")
+// // Let's make this an API server that can filter the episodes based on the following criteria:
+// // - month: the month of the air date (1-12)
+// // - subject: the subject of the episode (e.g. "Cactus", "Moon")
+// // - colors: the colors of the episode (e.g. "Prussian Blue", "Burnt Sienna")
+// // - matchType: whether to match all criteria or any criteria (e.g. "all" or "any")
 
 require('dotenv').config();
-
+console.log('Hello World');
 
 const express = require('express');
 const mysql = require('mysql');
 const fs = require('fs');
-const parse = require('csv-parse/lib/sync');
+const {parse} = require('csv-parse');
 
 
 const app = express();

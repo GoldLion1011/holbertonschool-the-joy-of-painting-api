@@ -5,7 +5,7 @@
 // // - matchType: whether to match all criteria or any criteria (e.g. "all" or "any")
 
 require('dotenv').config();
-console.log('Hello World');
+
 
 const express = require('express');
 const mysql = require('mysql');
